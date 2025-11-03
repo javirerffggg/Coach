@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useStore from '../store/useStore';
 import { format } from 'date-fns';
+import WeeklyReportButton from './WeeklyReportButton';
 
 const Profile = ({ onNavigate }) => {
   const user = useStore((state) => state.user);
@@ -116,6 +117,19 @@ const Profile = ({ onNavigate }) => {
         </div>
       </div>
 
+      {/* Exportar Reporte */}
+      <div className="px-6 mt-6">
+        <div className="card">
+          <h3 className="text-lg font-semibold text-white mb-3">
+            📤 Exportar Datos
+          </h3>
+          <p className="text-sm text-gray-400 mb-4">
+            Genera un reporte semanal completo para análisis
+          </p>
+          <WeeklyReportButton />
+        </div>
+      </div>
+
       {/* Modo Desarrollador */}
       <div className="px-6 mt-6">
         <button
@@ -205,6 +219,7 @@ const Profile = ({ onNavigate }) => {
                 className="btn-primary flex-1"
               >
                 Guardar
+              Warning:
               </button>
             </div>
           </div>
