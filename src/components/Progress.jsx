@@ -1,8 +1,8 @@
-import WeeklyReportButton from './WeeklyReportButton';
 import React, { useState } from 'react';
 import useStore from '../store/useStore';
 import { format, subDays, parseISO } from 'date-fns';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import WeeklyReportButton from './WeeklyReportButton';
 
 const Progress = ({ onNavigate }) => {
   const user = useStore((state) => state.user);
