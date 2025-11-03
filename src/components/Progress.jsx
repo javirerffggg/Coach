@@ -257,6 +257,20 @@ const Progress = ({ onNavigate }) => {
           </div>
         </div>
       </div>
+
+      {/* Exportar Reporte */}
+      <div className="px-6 mt-6 mb-8">
+        <div className="card">
+          <h3 className="text-lg font-semibold text-white mb-4">
+            📊 Reporte Semanal para IA
+          </h3>
+          <p className="text-sm text-gray-400 mb-4">
+            Exporta un resumen completo de la última semana para análisis por IA externa.
+            Incluye objetivos, promedios, adherencia, evolución del peso y detalles diarios.
+          </p>
+          <WeeklyReportButton />
+        </div>
+      </div>
     </div>
   );
 };
